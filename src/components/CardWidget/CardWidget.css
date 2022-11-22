@@ -1,0 +1,10 @@
+.carrito{
+    background-color: #d85677;
+    border: none;
+    color: #FFF;
+    font-size: 14px;
+}
+.carrito:hover{
+    background-color: #e6c9d0;
+    
+}
