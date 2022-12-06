@@ -1,14 +1,15 @@
 import './Navbar.css'
 import CardWidget from '../CardWidget/CardWidget'
+import { Link } from 'react-router-dom'
 
 
 const Navbar = () => {
     return(
         <nav className="nav">
             <img src='./images/logo.png'/>
-           <button className="boton">Cuadernos</button>
-           <button className="boton">Agendas</button>
-           <button className="boton">Libretas</button>
+           <Link to='/category/cuaderno' className="boton">Cuadernos</Link>
+           <Link to='/category/agenda' className="boton">Agendas</Link>
+           <Link to='/category/libreta' className="boton">Libretas</Link>
            <CardWidget/>
      </nav>
 
