@@ -1,33 +1,37 @@
 const products=[
     {
         id: '1',
-        title: 'Cuaderno 1',
-        category : 'cuaderno',
+        title: 'Cuadernos lisos',
+        img: './images/cuaderno1.jpg',
+        category : 'Categoría cuaderno',
         price: '$1.500',
-        description: 'Lalalal descripcion 1'
+        description: 'Cuaderno tamaño A4, con tapa de madera e interior de hojas lisas. Cuenta con 100 hojas para completar de la forma que se desee'
     },
     {
         id: '2',
-        title: 'Cuaderno 2',
-        category : 'agenda',
+        title: 'Agenda 2023',
+        img: './images/agenda.jpg',
+        category : 'Categoría agenda',
         price: '$1.800',
-        description: 'Lalalal descripcion 2'
+        description: 'Agenda tamaño A4, con tapa de madera personalizable e interior de hojas lisas. Cuenta con 100 hojas para completar de la forma que se desee'
     },
 
     {
         id: '3',
-        title: 'Cuaderno 3',
-        category : 'libreta',
+        title: 'Libreta',
+        img: './images/libreta.jpg',
+        category : 'Categoría libreta',
         price: '$2.200',
-        description: 'Lalalal descripcion 3'
+        description: 'Libreta tamaño A5, con tapa de madera personalizable e interior de hojas lisas. Cuenta con 100 hojas para completar de la forma que se desee'
     },
 
     {
         id: '4',
-        title: 'Cuaderno 4',
-        category : 'cuaderno',
+        title: 'Bitácora de viaje',
+        img: './images/cuaderno2.jpg',
+        category : 'Categoría cuaderno',
         price: '$1.450',
-        description: 'Lalalal descripcion 4'
+        description: 'Cuaderno tamaño A4, se trata de un cuaderno bitácora para poder plasmar lo vivido en un viaje. Cuenta con con tapa de madera e interior de hojas 80 lisas completar de la forma que se desee'
     }
 
 
@@ -37,7 +41,7 @@ export const getProducts = () => {
 return new Promise((resolve) => {
     setTimeout (() =>{
         resolve (products)
-    }, 1000 )
+    }, 100 )
 })
 }
 
@@ -45,7 +49,7 @@ export const getProductById = (id) => {
     return new Promise((resolve) => {
         setTimeout (() =>{
             resolve (products.find(product => product.id === id))
-        }, 500 )
+        }, 100 )
     })
     }
 
@@ -54,7 +58,7 @@ export const getProductsByCategory = (categoryId) => {
         return new Promise((resolve) => {
           setTimeout(() => {
             resolve(products.filter(product => product.category === categoryId))
-          }, 500)
+          }, 100)
         })
       }
       

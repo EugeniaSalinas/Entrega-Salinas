@@ -1,0 +1,38 @@
+.imgs{
+    width: 100%;
+}
+.producto-contenedor{
+    width: 300px;
+    border-radius: 20px;    
+    background-color: rgb(228, 227, 227);
+    padding: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+.producto-contenedor:hover{
+    scale: 1.05;
+    transition: 0.5s;
+    
+}
+
+.description{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.botonVerDetalles{
+    background-color: #90384E;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.botonVerDetalles:hover{
+    background-color: #a9d444;    
+    color: #ffffff; 
+    transition: 0.5s;
+    
+}
