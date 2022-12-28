@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react"
-import { getProductById } from "../../asyncMock"
+//import { getProductById, getProductsByCategory } from "../../asyncMock"
 import { useParams } from "react-router-dom"
-import './ItemDetailContainer.css'
-
+import { getDoc, doc } from 'firebase/firestore'
+import { db } from "../../services/firebase/firebaseConfig"
+import ItemDetail from "../ItemDetail/ItemDetail"
 
 const ItemDetailContainer = () => {
 
@@ -10,27 +11,35 @@ const ItemDetailContainer = () => {
 
     const {itemId} = useParams()
 
-    useEffect(()=>{
-        getProductById(itemId)
+    
+
+    useEffect(() => {
+        const productFirebase = doc(db, 'products', itemId)
+        getDoc (productFirebase)
+            .then (doc =>{
+            const data = doc.data()
+            const productNew = {id: doc.id, ...data}
+
+            setProduct(productNew)
+        }).catch(error => {
+            console.log(error)})
+        /*getProductById(itemId)
         .then(response =>{
            setProduct(response)
         })
         .catch(error => {
             console.log(error)
-        })
+        })*/
     },[itemId])
 
+   
+
+   
 
     return (
         <div>
             <h2>Detalles</h2>
-            <div className="producto-contenedor-detalles">
-                <h2>{product.title}</h2>
-                <img src={product.img} className="imgs" alt="imagen de un cuaderno"/>
-                <p>{product.description}</p>
-                <p>{product.category}</p>
-                <p>{product.price}</p>
-            </div>
+            <ItemDetail {...product}/>
         </div>
     )
 }
