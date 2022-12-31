@@ -5,7 +5,7 @@
     width: 300px;
     border-radius: 20px;    
     background-color: rgb(228, 227, 227);
-    padding: 15px;
+    padding: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
 }
@@ -35,4 +35,8 @@
     color: #ffffff; 
     transition: 0.5s;
     
+}
+
+.price{
+    font-size: 20px;
 }

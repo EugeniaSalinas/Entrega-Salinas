@@ -1,10 +1,11 @@
 .carrito{
-    background-color: #d85677;
     border: none;
     color: #FFF;
     font-size: 14px;
+    text-decoration: none;
 }
 .carrito:hover{
-    background-color: #e6c9d0;
+    transform: scale(0.9);
+    transition: 0.3s;
     
 }

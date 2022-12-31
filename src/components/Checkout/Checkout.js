@@ -1,18 +1,17 @@
 import { useContext, useState } from "react"
 import { CartContext } from "../../context/CartContext"
-import Cart from "../Cart/Cart"
 import {addDoc, collection} from 'firebase/firestore'
 import { db } from "../../services/firebase/firebaseConfig"
+import './Checkout.css'
+import swal from "sweetalert"
+
+
 
 const Checkout = () =>{
     const { cart, totalCompra} = useContext(CartContext)
 
     const valorInicial = {
-       buyer:{
-        nombre: '',
-        mail:'',
-        telefono:''
-    },
+       
     items: cart,
     total: totalCompra()
     }
@@ -20,7 +19,7 @@ const Checkout = () =>{
     const [user,setUser] = useState(valorInicial)
 
     const capturarInputs = (e) => {
-        e.preventDefault();
+        
         const {name,value} = e.target;
         setUser({...user, [name]:value})
     }
@@ -34,8 +33,10 @@ const Checkout = () =>{
 
         addDoc(orden, user)
         .then(response => {
-            console.log(response.id)
+            swal("Orden confirmada! El ID del pedido es:", response.id)
         })
+       
+
     }
 
    
@@ -45,16 +46,18 @@ const Checkout = () =>{
     return(
         <div>
             <h3>CHECKOUT</h3>
-            <form onSubmit={guardarOrden}>
-                <div>
-                <input type="text" name='nombre' placeholder='Nombre y Apellido' onChange={capturarInputs} value={user.nombre}/>
-                <input type="email" name='mail' placeholder='Correo electrónico'onChange={capturarInputs} value={user.mail}/>
-                <input type="number" name='telefono' placeholder='Teléfono'onChange={capturarInputs} value={user.telefono}/>
+            <div className="form-contenedor">
+            <form onSubmit={guardarOrden} >
+                <div >
+                <input type="text" name='nombre' placeholder='Nombre y Apellido' onChange={capturarInputs} value={user.nombre} className="inputs"/>
+                <input type="email" name='mail' placeholder='Correo electrónico'onChange={capturarInputs} value={user.mail}className="inputs"/>
+                <input type="number" name='telefono' placeholder='Teléfono'onChange={capturarInputs} value={user.telefono}className="inputs"/>
 
-                <button>Enviar</button>
+                <button className="botonEnviar">Enviar</button>
 
                 </div>
             </form>
+            </div>
         </div>
     
     )

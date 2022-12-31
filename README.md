@@ -1,6 +1,24 @@
-# Getting Started with Create React App
+# E-commerce Napaka
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+Napaka es un emprendimiento de cuadernos y encuadernado artesanal,
+consta de productos realizados con materiales reciclados y pueden ser personalizados a gusto.
+A continuación podrás comprar el cuaderno que más te guste eligiendo la categoría que más te interese.
+Podrás agregar tu prodcuto al carrito sumando la cantidad que desees.
+Para realizar esta aplicación se utilizós Firebase y React JS
+
+
+
+## Routes
+
+- / => Se muestra el catálogo completo de productos
+- /category/:categoryId  => Productos filtrado por categoría
+- /item/:itemId  => Muestra el detalle del producto seleccionado
+- /cart => Muestra el carrito de compras
+- /checkout  => Se genera la orden de compra
+
 
 ## Available Scripts
 

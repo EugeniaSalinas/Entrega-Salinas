@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Roboto:ital,wght@0,400;1,500;1,900&display=swap');
+
+
+.cartContenedor{
+    width: 400px;
+    border-radius: 20px;    
+    background-color: rgb(228, 227, 227);
+    padding: 15px;
+    font-family:'Roboto', sans-serif;
+    margin: 0 auto;
+}
+
+.botonEliminar{
+    background-color: rgb(165, 4, 4);
+    color: white;
+    border-radius: 10px;
+    border: 0;
+    padding: 15px;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+.botonConfirmar{
+    background-color: rgb(46, 175, 85);
+    color: white;
+    border-radius: 10px;
+    border: 0;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 100px;
+
+}
+
+.botonConfirmar:hover{
+    transform: scale(0.95);
+    transition: 0.3s;
+}
+
+.botonEliminar:hover{
+    transform: scale(0.95);
+    transition: 0.3s;
+  }
+
+.title{
+    font-size: 20px;
+    font-weight: 800;
+}

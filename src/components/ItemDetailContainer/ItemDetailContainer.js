@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-//import { getProductById, getProductsByCategory } from "../../asyncMock"
 import { useParams } from "react-router-dom"
 import { getDoc, doc } from 'firebase/firestore'
 import { db } from "../../services/firebase/firebaseConfig"
@@ -23,13 +22,7 @@ const ItemDetailContainer = () => {
             setProduct(productNew)
         }).catch(error => {
             console.log(error)})
-        /*getProductById(itemId)
-        .then(response =>{
-           setProduct(response)
-        })
-        .catch(error => {
-            console.log(error)
-        })*/
+      
     },[itemId])
 
    

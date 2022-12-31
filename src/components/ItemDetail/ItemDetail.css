@@ -11,3 +11,28 @@
     margin: 0 auto;
     
 }
+
+.price {
+    font-size: 26px;
+    font-weight: 300;
+   
+}
+
+.botonFinalizarCompra{
+    background-color:brown;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    border: 0;
+    font-size: 20px;
+    margin: 10px;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.botonFinalizarCompra:hover{
+    background-color: rgb(141, 141, 141);    
+    color: rgb(255, 255, 255);
+    transform: scale(0.98);
+    transition: 0.3s;
+  
+}

@@ -12,24 +12,8 @@ const ItemListContainer = () => {
     const {categoryId} = useParams()
 
     useEffect(()=>{
-       /* if(!categoryId){
-            getProducts()
-            .then(response =>{
-                setProducts(response)
-            })
-            .catch(error => {
-                console.log(error)
-            })
-        } else {
-            getProductsByCategory(categoryId)
-            .then(response =>{
-                setProducts(response)
-            })
-            .catch(error => {
-                console.log(error)
-            })
-        }*/
-        const collectionFirebase = categoryId ? query (collection(db, 'products'), where('category', '==', categoryId)) : collection(db, 'products')
+
+       const collectionFirebase = categoryId ? query (collection(db, 'products'), where('category', '==', categoryId)) : collection(db, 'products')
        getDocs(collectionFirebase)
           .then (response => {
            const productsNew = response.docs.map (doc =>{

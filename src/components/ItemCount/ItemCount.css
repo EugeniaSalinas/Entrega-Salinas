@@ -1,0 +1,32 @@
+.botonSumar{
+
+    color: brown;
+    border: 0;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.botonSumar:hover{
+    background-color:brown;
+    color: rgb(255, 255, 255);
+  
+    transition: 0.2s;
+}
+
+.agregarAlCarrito{
+    background-color:brown;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    border: 0;
+    font-size: 20px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.agregarAlCarrito:hover{
+    background-color: rgb(141, 141, 141);    
+    color: rgb(255, 255, 255);
+    transform: scale(0.98);
+    transition: 0.3s;
+  
+}
